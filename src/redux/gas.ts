@@ -402,10 +402,6 @@ export const gasPricesStartPolling = (network = Network.mainnet) => async (
             adjustedGasFees,
             network
           );
-          if (existingGasFees[CUSTOM] !== null) {
-            // Preserve custom values while updating prices
-            gasFeeParamsBySpeed[CUSTOM] = existingGasFees[CUSTOM];
-          }
 
           const _selectedGasFeeOption = selectedGasFee.option || NORMAL;
           const _gasLimit = gasLimit || defaultGasLimit;
